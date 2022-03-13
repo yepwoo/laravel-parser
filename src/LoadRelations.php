@@ -6,7 +6,7 @@ namespace Yepwoo\LaravelParser;
 use Illuminate\Http\Request;
 use Yepwoo\LaravelParser\Interfaces\LoadParserInterface;
 
-class loadRelations extends ParentLoader implements LoadParserInterface
+class LoadRelations extends ParentLoader implements LoadParserInterface
 {
 
     public function __construct($model, Request $request)
@@ -31,7 +31,7 @@ class loadRelations extends ParentLoader implements LoadParserInterface
      * Change relation method in builder case
      * @param $relationMethod
      */
-    private function changeRelationMethod(&$relationMethod)
+    protected function changeRelationMethod(&$relationMethod)
     {
         $relationMethod = 'with';
     }
@@ -41,7 +41,7 @@ class loadRelations extends ParentLoader implements LoadParserInterface
      * @param $loaderParam
      * @param $relationMethod
      */
-    private function relationsLoading($loaderParam, $relationMethod)
+    protected function relationsLoading($loaderParam, $relationMethod)
     {
         $requestedRelations = $this->request->get($loaderParam);
 

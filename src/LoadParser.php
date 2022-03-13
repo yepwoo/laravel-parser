@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Yepwoo\LaravelParser;
 
 use Illuminate\Http\Request;
@@ -17,10 +16,9 @@ class LoadParser
         $this->model   = $model;
     }
 
-
-    public function loadRelations(): loadRelations
+    public function loadRelations(): LoadRelations
     {
-        return new loadRelations($this->model, $this->request);
+        return new LoadRelations($this->model, $this->request);
     }
 
     public function loadAttributes(): loadAttributes
