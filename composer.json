@@ -1,0 +1,35 @@
+{
+    "name": "yepwoo/laravelparser",
+    "description": "Easily load model relations / accessories / attributes from frontend without changing your API",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Yepwoo\\LaravelParser\\": "src/"
+        }
+    },
+    "keywords": [
+        "laravel",
+        "model relations",
+        "relation loader",
+        "acessor loader",
+        "append acessor on demand"
+    ],
+
+    "authors": [
+        {
+            "name": "Mahmood Ahmad",
+            "email": "mahmood073@gmail.com"
+        },
+        {
+            "name": "Abdlrahman Saber",
+            "email": "abdlrahmansaber652@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/http": "^8.0 || ^9.0",
+        "illuminate/database": "^8.0 || ^9.0",
+        "php": "^7.4|^8.0"
+    }
+}
