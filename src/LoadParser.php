@@ -21,9 +21,9 @@ class LoadParser
         return new LoadRelations($this->model, $this->request);
     }
 
-    public function loadAttributes(): loadAttributes
+    public function loadAttributes(): LoadAttributes
     {
-        return new loadAttributes($this->model, $this->request);
+        return new LoadAttributes($this->model, $this->request);
     }
 
 }

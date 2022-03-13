@@ -7,7 +7,7 @@ namespace Yepwoo\LaravelParser;
 use Illuminate\Http\Request;
 use Yepwoo\LaravelParser\Interfaces\LoadParserInterface;
 
-class loadAttributes extends ParentLoader implements LoadParserInterface
+class LoadAttributes extends ParentLoader implements LoadParserInterface
 {
     public function __construct($model, Request $request)
     {
