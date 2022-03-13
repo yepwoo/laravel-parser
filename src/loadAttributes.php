@@ -26,7 +26,7 @@ class loadAttributes extends ParentLoader implements LoadParserInterface
         $this->attributesLoading($loaderParam, $attributeMethod);
     }
 
-    private function attributesLoading($loaderParam, $attributeMethod)
+    protected function attributesLoading($loaderParam, $attributeMethod)
     {
         $requestedAttributes = $this->request->get($loaderParam);
 
