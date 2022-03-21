@@ -12,7 +12,12 @@ class LoadRelations extends ParentLoader implements LoadParserInterface
     public function __construct($model, Request $request)
     {
         parent::__construct($model, $request);
+    }
 
+    /**
+     * @return $this|void
+     */
+    public function parse() {
         $loaderParam  = 'with';
         if (!$this->isRequiredParameterExist($loaderParam)) {
             return;
@@ -25,6 +30,8 @@ class LoadRelations extends ParentLoader implements LoadParserInterface
         }
 
         $this->relationsLoading($loaderParam, $relationMethod);
+
+        return $this;
     }
 
     /**
@@ -44,9 +51,9 @@ class LoadRelations extends ParentLoader implements LoadParserInterface
     protected function relationsLoading($loaderParam, $relationMethod)
     {
         $requestedRelations = $this->request->get($loaderParam);
-
         $relationsToArray = explode(',', $requestedRelations);
-
         $this->model->$relationMethod($relationsToArray);
     }
 }
+
+
