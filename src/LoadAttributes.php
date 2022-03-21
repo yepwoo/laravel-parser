@@ -13,10 +13,18 @@ class LoadAttributes extends ParentLoader implements LoadParserInterface
     {
         parent::__construct($model, $request);
 
+
+    }
+
+    /**
+     * @return $this|void
+     */
+    public function parse()
+    {
         $loaderParam = 'append';
 
         if (
-            !$this->isRequiredParameterExist($loaderParam)
+        !$this->isRequiredParameterExist($loaderParam)
         ) {
             return;
         }
@@ -24,8 +32,14 @@ class LoadAttributes extends ParentLoader implements LoadParserInterface
         $attributeMethod = 'append';
 
         $this->attributesLoading($loaderParam, $attributeMethod);
+
+        return $this;
     }
 
+    /**
+     * @param $loaderParam
+     * @param $attributeMethod
+     */
     protected function attributesLoading($loaderParam, $attributeMethod)
     {
         $requestedAttributes = $this->request->get($loaderParam);
