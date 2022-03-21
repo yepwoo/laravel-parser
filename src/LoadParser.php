@@ -16,14 +16,22 @@ class LoadParser
         $this->model   = $model;
     }
 
-    public function loadRelations(): LoadRelations
+    /**
+     * @return void|LoadRelations
+     */
+    public function loadRelations()
     {
-        return new LoadRelations($this->model, $this->request);
+        $relation = new LoadRelations($this->model, $this->request);
+        return $relation->parse();
     }
 
-    public function loadAttributes(): LoadAttributes
+    /**
+     * @return void|LoadAttributes
+     */
+    public function loadAttributes()
     {
-        return new LoadAttributes($this->model, $this->request);
+        $attribute_parser = new LoadAttributes($this->model, $this->request);
+        return $attribute_parser->parse();
     }
 
 }
