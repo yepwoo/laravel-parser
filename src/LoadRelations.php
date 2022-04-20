@@ -52,6 +52,7 @@ class LoadRelations extends ParentLoader implements LoadParserInterface
     {
         $requestedRelations = $this->request->get($loaderParam);
         $relationsToArray = explode(',', $requestedRelations);
+
         $this->model->$relationMethod($relationsToArray);
     }
 }
