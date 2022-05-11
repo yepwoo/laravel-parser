@@ -1,5 +1,5 @@
 {
-    "name": "yepwoo/laravelparser",
+    "name": "yepwoo/laravel-parser",
     "description": "Easily load model relations / accessories / attributes from frontend without changing your API",
     "type": "library",
     "license": "MIT",
