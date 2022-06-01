@@ -1,3 +1,4 @@
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 # Installation
 `composer require yepwoo/laravel-parser`
 
