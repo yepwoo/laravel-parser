@@ -11,7 +11,7 @@ Add `with` param to your HTTP request
 
 `/posts?with=comments,tags,anyOtherRelation`
 
-# Loading Attributes
+# Loading Attributes / Accessors
 Add `append` param to your HTTP request
 
 `/posts?append=my_custom_attribute`
@@ -20,7 +20,7 @@ Add `append` param to your HTTP request
 - Go to your controller and call `use Yepwoo\LaravelParser\LoadParser`
 - Create new object from `LoadParser` class and pass `request` and `data` -> `new LoadParser($request, $data)`
 - If you want to load `relations` use `loadRelation` function.
-- If you want to load `attributes` use `loadAttributes` function.
+- If you want to load `attributes/accessors` use `loadAttributes` function.
 
 ## Here's a full example
 ```

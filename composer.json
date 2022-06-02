@@ -14,7 +14,7 @@
         "model relations",
         "relation loader",
         "acessor loader",
-        "append acessor on demand"
+        "append accessor on demand"
     ],
 
     "authors": [
