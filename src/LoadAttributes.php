@@ -12,8 +12,6 @@ class LoadAttributes extends ParentLoader implements LoadParserInterface
     public function __construct($model, Request $request)
     {
         parent::__construct($model, $request);
-
-
     }
 
     /**
